@@ -3,10 +3,12 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/")
+
+@app.get("/api")
 def read_root():
     return {"Hello": "World"}
 
-@app.get("/ping")
+
+@app.get("/api/ping")
 def read_root():
     return 200

@@ -1,4 +1,6 @@
-import './App.css';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import "./App.css";
 
 export default function App() {
   return (
@@ -11,13 +13,28 @@ export default function App() {
 }
 
 const Header = () => {
-  return (<p>Search Bar</p>)
-}
+  return <p>Search Bar</p>;
+};
 
 const LyricsDiaplay = () => {
-  return (<p>Display Lyrics</p>)
-}
+  return <p>Display Lyrics</p>;
+};
 
 const RecDisplay = () => {
-  return (<p>Display Recommendation</p>)
-}
+  const [mes, setMes] = useState("");
+
+  useEffect(() => {
+    fetchBackend();
+  }, []);
+
+  const fetchBackend = async () => {
+    await axios.get("/api").then((res) => setMes(res.data["Hello"]));
+  };
+
+  return (
+    <>
+      <p>Display Recommendation</p>
+      <p>This is a message from FastAPI: {mes}</p>
+    </>
+  );
+};
