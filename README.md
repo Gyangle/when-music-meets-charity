@@ -5,3 +5,14 @@ Our team would like to use music to raise awareness of contributing to charity a
 ## Run
 Start the React frontend in `app/ui/`
 Start the FastAPI backend in `app/server/`
+
+## Run using docker-compose
+Make sure the instaltion of `docker` and `docker-compose`. In the root level, run:
+```
+docker-compose build
+```
+and 
+```
+docker-compose up
+```
+Visit http://localhost to see the UI and http://localhost:8000 for api. 

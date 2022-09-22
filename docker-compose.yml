@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./app/server
+    ports:
+      - 8000:8000
+    restart: always
+
+  frontend:
+    depends_on:
+      - backend
+    build: ./app/ui
+    ports:
+      - "80:80"

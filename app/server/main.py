@@ -5,10 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-origins = [
-    "http://localhost:3000",
-    "localhost:3000"
-]
+origins = ["*"]
 
 
 app.add_middleware(
@@ -18,11 +15,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
-
-
-@app.get("/api")
-def read_root():
-    return {"Hello": "World"}
 
 
 @app.get("/api/ping")
