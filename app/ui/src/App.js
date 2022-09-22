@@ -28,7 +28,7 @@ const RecDisplay = () => {
   }, []);
 
   const fetchBackend = async () => {
-    await axios.get("/api/ping").then((res) => setMes(res.data));
+    await axios.get("http://localhost:8000/api/ping").then((res) => setMes(res.data));
   };
 
   return (
