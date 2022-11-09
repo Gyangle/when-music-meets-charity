@@ -35,6 +35,7 @@ const RecDisplay = () => {
     <>
       <p>Display Recommendation</p>
       <p>This is a message from FastAPI: {mes}</p>
+      <p>I'm trying to deploy this</p>
     </>
   );
 };

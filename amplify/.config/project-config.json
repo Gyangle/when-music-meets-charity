@@ -1,0 +1,17 @@
+{
+  "providers": [
+    "awscloudformation"
+  ],
+  "projectName": "musictesting",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "app/ui",
+      "DistributionDir": "app/ui/build",
+      "BuildCommand": "yarn build",
+      "StartCommand": "yarn start"
+    }
+  }
+}
