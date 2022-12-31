@@ -8,6 +8,7 @@ export default function App() {
       <Header />
       <LyricsDiaplay />
       <RecDisplay />
+      <AmplifyBackendTesting />
     </div>
   );
 }
@@ -19,6 +20,10 @@ const Header = () => {
 const LyricsDiaplay = () => {
   return <p>Display Lyrics</p>;
 };
+
+const AmplifyBackendTesting = () => {
+  return <p>Backend</p>
+}
 
 const RecDisplay = () => {
   const [mes, setMes] = useState("");
